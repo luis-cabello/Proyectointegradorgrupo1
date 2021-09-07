@@ -10,6 +10,9 @@ img{
 .logo{
    margin: 0 auto
 }
+.logo{
+    width: 25%;
+}
 .titulo{
     text-align: center;
     font-size: 50px;
@@ -17,9 +20,7 @@ img{
 .menu{
     list-style-type: none;
     text-align: right;
-    
 }
-
 
 footer{
     color: white;
@@ -41,7 +42,31 @@ footer{
     width: 100%
 }
 .peliculasrecomendadas article{
-    width: 30%
+    width: 18%
 }
 
+.seriespopulares{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+.seriespopulares h1{
+    width: 100%;
+}
+.seriespopulares article{
+    width: 18%;
+}
+
+.peliculasmasvistas{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
+.peliculasmasvistas h1{
+    width: 100%;
+}
+.peliculasmasvistas article{
+    width: 18%;
+}
    
