@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(#61E9FF , #000000);
+    background: linear-gradient(#44929e , #000000);
     font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -22,6 +22,11 @@ img{
     text-align: right;
 }
 
+header article{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 footer{
     color: white;
     display: flex; justify-content: center;
