@@ -1,0 +1,20 @@
+body{
+    background: linear-gradient(#A0FFAD, #000000);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.logo{
+    display: flex; justify-content: center;
+    
+}
+.titulo{
+    text-align: center;
+    font-size: 50px;
+}
+.menu{
+    list-style-type: none;
+    text-align: right;
+    
+}
+
