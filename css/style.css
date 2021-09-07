@@ -3,10 +3,12 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 
 }
+img{
+    width:100%
+}
 
 .logo{
-    display: flex; justify-content: center;
-    
+   margin: 0 auto
 }
 .titulo{
     text-align: center;
@@ -29,7 +31,17 @@ footer{
     color: white;
 }
 
+.peliculasrecomendadas{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-
+}
+.peliculasrecomendadas h1{
+    width: 100%
+}
+.peliculasrecomendadas article{
+    width: 30%
+}
 
    
