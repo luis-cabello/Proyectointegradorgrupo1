@@ -75,4 +75,15 @@ footer{
 .peliculasmasvistas article{
     width: 18%;
 }
-   
+.Detalleslistar{
+    list-style-type: none;
+
+}
+.imgfocus{
+    width: 30%;
+
+    
+}
+.detalles{
+    
+}
