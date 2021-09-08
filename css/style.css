@@ -77,13 +77,13 @@ footer{
 }
 .Detalleslistar{
     list-style-type: none;
-
+    justify-content: space-between;
+    width: 55%;
 }
 .imgfocus{
     width: 30%;
-
-    
 }
+
 .detalles{
-    
+    display:-webkit-inline-box;
 }
