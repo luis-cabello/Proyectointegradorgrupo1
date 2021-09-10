@@ -36,6 +36,7 @@ footer{
 
 .letrablanca{
     color: white;
+    list-style-type: none;
 }
 
 .peliculasrecomendadas{
@@ -76,17 +77,22 @@ footer{
     width: 18%;
 }
 .Detalleslistar{
-    list-style-type: none;
-    width: 55%;
-}
-.imgfocus{
-    width: 30%;
+list-style-type: none;
 }
 
-.detalles{
-    display: flex; 
+
+
+.detailmovie{
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
+.detailmovie h2{
+    width: 100%
+}
+
+.detailmovie article{
+    width: 18%;
+}
+ 
