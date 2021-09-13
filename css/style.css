@@ -21,6 +21,8 @@ img{
 .menu{
     list-style-type: none;
     text-align: right;
+    text-decoration: none;
+    
 }
 
 header article{
