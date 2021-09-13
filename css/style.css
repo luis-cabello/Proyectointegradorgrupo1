@@ -8,15 +8,14 @@ img{
 }
 
 .logo{
-   margin: 0 auto
-   30px
+   margin: auto;
+   width: 20%;
 }
-.logo{
-    width: 25%;
-}
+
 .titulo{
     text-align: center;
     font-size: 50px;
+    color: white;
 }
 .menu{
     list-style-type: none;
