@@ -33,6 +33,7 @@ header article{
 footer{
     color: white;
     display: flex; justify-content: center;
+    text-decoration: none;
 
 }
 
@@ -99,10 +100,12 @@ list-style-type: none;
 }
  
 .generos{
-    list-style-type: none;
-    padding-bottom: 300px;
-    text-align: center;
-    font-size: 36px
+    display: flex; 
+    flex-direction: column;justify-content: space-around;
+    align-items: center;
+    padding-bottom: 240px;
+
+    font-size: 36px;
     
 
 }
@@ -110,3 +113,5 @@ list-style-type: none;
 section h2 {
     font-size: 28px;
 }
+
+
