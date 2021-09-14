@@ -113,4 +113,8 @@ section h2 {
     font-size: 28px;
 }
 
-
+.Detallesgeneros {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
