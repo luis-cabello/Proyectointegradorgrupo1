@@ -103,13 +103,7 @@ list-style-type: none;
  
 .generos{
     display: flex; 
-    flex-direction: column;justify-content: space-around;
-    align-items: center;
-    padding-bottom: 240px;
-
-    font-size: 36px;
-    
-
+    flex-wrap: wrap;
 }
 
 section h2 {
@@ -120,4 +114,17 @@ section h2 {
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between; 
+}
+.generos section article a {
+    width: 100%;
+    font-size: 30%;
+}
+
+.fotosgenero{
+    width: 100%;
+}
+
+.cajageneros{
+    width: 18%;
+    justify-content: space-between;
 }
