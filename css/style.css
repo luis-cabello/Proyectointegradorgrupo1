@@ -82,7 +82,10 @@ footer{
 list-style-type: none;
 }
 
-
+.foto{
+    width: 90%;
+    height: auto;
+}
 
 .detailmovie{
     display: flex;
