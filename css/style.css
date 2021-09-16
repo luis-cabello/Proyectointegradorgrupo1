@@ -127,3 +127,12 @@ section h2 {
 .cajageneros{
     width: 18%;
 }
+
+.focusdetalles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+.focusfoto{
+    width: 33%;
+}
