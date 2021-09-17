@@ -4,7 +4,7 @@ body{
 
 }
 img{
-    width:100%
+    width:100%;
 }
 
 .logo{
@@ -18,10 +18,8 @@ img{
     color: white;
 }
 .menu{
-    list-style-type: none;
     text-align: right;
-    text-decoration: none;
-    
+    font-size: 22px;
 }
 
 header article{
@@ -32,14 +30,16 @@ header article{
 footer{
     color: white;
     display: flex; justify-content: center;
-    text-decoration: none;
+    font-family: 20px;
 
 }
+
 
 .letrablanca{
     color: white;
     list-style-type: none;
 }
+
 
 .peliculasrecomendadas{
     display: flex; 
@@ -47,11 +47,23 @@ footer{
     justify-content: space-between;
 
 }
-.peliculasrecomendadas h1{
-    width: 100%
+
+.heart{
+    width: 20px;
+    
 }
+
+.hipervinculos{
+color: white;
+text-decoration: none;
+}
+
+.peliculasrecomendadas h1{
+    width: 100%;
+}
+
 .peliculasrecomendadas article{
-    width: 18%
+    width: 18%;
 }
 
 .seriespopulares{
