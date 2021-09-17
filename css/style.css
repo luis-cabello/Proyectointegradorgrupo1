@@ -22,6 +22,7 @@ img{
 .menu{
     text-align: right;
     font-size: 22px;
+    color: white;
 }
 
 header article{
@@ -40,10 +41,11 @@ footer{
 .letrablanca{
     color: white;
     list-style-type: none;
+    text-decoration: none;
 }
 
 
-.peliculasrecomendadas{
+.atributoflex{
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -55,97 +57,23 @@ footer{
     
 }
 
-.hipervinculos{
-color: white;
-text-decoration: none;
-}
-
-.peliculasrecomendadas h1{
+.atributoflex h1{
     width: 100%;
 }
 
-.peliculasrecomendadas article{
-    width: 18%;
-}
-
-.seriespopulares{
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-.seriespopulares h1{
-    width: 100%;
-}
-
-.seriespopulares article{
-    width: 18%;
-}
-
-.peliculasmasvistas{
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-.peliculasmasvistas h1{
-    width: 100%;
-}
-
-.peliculasmasvistas article{
-    width: 18%;
-}
-
-.Detalleslistar{
-list-style-type: none;
-}
-
-.foto{
-    width: 90%;
-    height: auto;
-}
-
-.detailmovie{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.detailmovie h2{
-    width: 100%
-}
-
-.detailmovie article{
+.atributoflex article{
     width: 18%;
 }
  
-.generos{
-    display: flex; 
-    flex-wrap: wrap;
+.foto{
+    width: 90%;
+    height: auto;
 }
 
 section h2 {
     font-size: 28px;
 }
 
-.Detallesgeneros {
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between; 
-}
-
-.generos section article a {
-    width: 100%;
-    font-size: 30%;
-}
-
-.fotosgenero{
-    width: 100%;
-}
-
-.cajageneros{
-    width: 18%;
-}
 
 .focusdetalles{
     display: flex;
@@ -153,6 +81,11 @@ section h2 {
     justify-content: left;
 }
 
+
 .focusfoto{
     width: 33%;
+}
+
+.genrie{
+    padding-top: 65px;
 }
