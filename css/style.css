@@ -35,7 +35,6 @@ footer{
     color: white;
     display: flex; justify-content: center;
     font-family: 20px;
-
 }
 
 .letrablanca{
@@ -44,12 +43,10 @@ footer{
     text-decoration: none;
 }
 
-
 .atributoflex{
     display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .heart{
@@ -67,13 +64,12 @@ footer{
  
 .foto{
     width: 90%;
-    height: auto;
+    min-height: 30vh;    
 }
 
 section h2 {
     font-size: 28px;
 }
-
 
 .focusdetalles{
     display: flex;
@@ -81,11 +77,30 @@ section h2 {
     justify-content: left;
 }
 
-
 .focusfoto{
     width: 33%;
 }
-
 .genrie{
     padding-top: 65px;
+}
+
+@media (max-width:420px){
+
+.atributoflex article{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.menu{
+
+text-align: center;
+
+}
+header article{
+    flex-direction: column;
+}
+
+    
 }
