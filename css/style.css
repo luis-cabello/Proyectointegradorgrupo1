@@ -84,6 +84,11 @@ section h2 {
     padding-top: 65px;
 }
 
+.avengersfoto div img{
+    width: 95%;
+    height: 290px;
+}
+
 @media (max-width:420px){
 
 .atributoflex article{
@@ -102,5 +107,8 @@ header article{
     flex-direction: column;
 }
 
+.buscador{
+    display: none;
+}
     
 }
