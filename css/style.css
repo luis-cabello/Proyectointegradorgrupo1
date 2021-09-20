@@ -85,8 +85,8 @@ section h2 {
 }
 
 .avengersfoto div img{
-    width: 100%;
-    height: 335px;
+    width: 95%;
+    height: 290px;
 }
 .avengersfoto img{
     width: 90%;
@@ -95,6 +95,7 @@ section h2 {
 .botonenviar{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .Responsivetext ul{
     list-style-type: none;
