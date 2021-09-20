@@ -45,8 +45,8 @@ footer{
 
 .atributoflex{
     display: flex; 
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .heart{
@@ -73,8 +73,8 @@ section h2 {
 
 .focusdetalles{
     display: flex;
-    flex-wrap: wrap;
     justify-content: left;
+    flex-wrap: wrap;
 }
 
 .focusfoto{
