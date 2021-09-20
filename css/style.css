@@ -88,6 +88,14 @@ section h2 {
     width: 95%;
     height: 290px;
 }
+.avengersfoto img{
+    width: 90%;
+    height: 265px;
+}
+.botonenviar{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 @media (max-width:420px){
 
@@ -111,4 +119,23 @@ header article{
     display: none;
 }
     
+.Responsivetext ul{
+    list-style-type: none;
+    text-decoration: none;
+    padding-left: 1px;
+}
+.responsiveformulario{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.avengersfoto div img{
+    width: 95%;
+    height: 245px;
+}
+.avengersfoto img{
+    width: 97%;
+    height: 245px;
+}
+
 }
