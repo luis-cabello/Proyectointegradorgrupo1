@@ -7,10 +7,10 @@ fetch(url)
    
 })
 .then(function(datos){
-    for(let i=0; i<=4; i++)
+    for(let i=0; i<=4; i++){
     console.log(datos.results[i])
 
-    document.querySelector(".atributoflex2").innerHTML+=`
+    document.querySelector(".atributoflex2").innerHTML +=`
     
 <article>
     <div class="foto">
@@ -18,9 +18,15 @@ fetch(url)
     </div>
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
-</article>`
+</article>
+`
    
     
-{
+    }
+
    
-}})
+})
+
+//Series Populares//
+
+
