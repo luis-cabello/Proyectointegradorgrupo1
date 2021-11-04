@@ -54,6 +54,12 @@ footer{
     justify-content: space-between;
 }
 
+.atributoflex3{
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .heart{
     width: 20px;
     
