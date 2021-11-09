@@ -72,7 +72,23 @@ footer{
 .atributoflex article{
     width: 18%;
 }
- 
+
+.atributoflex2 h1{
+    width: 100%;
+}
+
+.atributoflex2 article{
+    width: 18%;
+}
+
+.atributoflex3 h1{
+    width: 100%;
+}
+
+.atributoflex3 article{
+    width: 18%;
+}
+
 .foto{
     width: 90%;
     min-height: 30vh;    
