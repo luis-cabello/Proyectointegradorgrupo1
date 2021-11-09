@@ -7,22 +7,38 @@ let cadaPelicula = conviertoId.get("id"); //con el get triago una calve valor a 
 
 console.log(cadaPelicula); //Me fijo si esta todo bien en consola y si finalemente la informacion de cada pelicula se pudo pasar a un objeto literal.
 
-let url = "https://api.themoviedb.org/3/movie/top_rated?api_key=7a176cc95147be6e695be2faf0e8ff9c/" + cadaPelicula
+let url = "https://api.themoviedb.org/3/movie/" + cadaPelicula + "?api_key=7a176cc95147be6e695be2faf0e8ff9c";
 
 
 const imagen = document.querySelector("img");
 const titulo = document.querySelector("h2");
 const parrafo = document.querySelector("p");
 const trama = document.querySelector(".trama");
-const genero = document.querySelector(".genero")
-const duracion = document.querySelector(".duracion")
+const genero = document.querySelector(".genero");
+const duracion = document.querySelector(".duracion");
 
 fetch(url)
 
-.then (function (respuesta) {
-    return respuesta.json
-})
+    .then(function (respuesta) {
+        return respuesta.json()
+    })
 
-.then (function (data) {
-    
-})
+    .then(function (datos) {
+        console.log(datos);
+
+        titulo.innerText += "" + datos.title
+        imagen.src = datos.poster_path
+        imagen.alt = datos.title;
+        parrafo.innerText += "" + datos.release_date
+        trama.innerText += "" + datos.overview
+        genero.innerText += "" + datos.genres
+        duracion.innerText += "" + datos.runtime
+
+
+
+
+
+
+    })
+
+
