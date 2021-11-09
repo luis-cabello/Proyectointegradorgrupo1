@@ -16,16 +16,14 @@ fetch(url)
            
 <article>
     <div class="foto">
-            <img src=" "  alt=" "> 
+            <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].title} "> 
     </div>
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
 </article>
 `
 
-
         }
-
 
     })
 
@@ -51,7 +49,7 @@ fetch(url2)
 <article> 
 
     <div class="foto">
-            <img src=" "  alt=" ">
+            <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].name}">
     </div>
     <h2>${datos.results[i].name}</h2>
     <p>${datos.results[i].first_air_date}</p>
@@ -82,7 +80,7 @@ fetch(url3)
 <article> 
 
     <div class="foto">
-            <img src=" "  alt=" ">
+            <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}" alt="${datos.results[i].title} ">
     </div>
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
