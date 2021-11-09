@@ -98,27 +98,11 @@ section h2 {
     font-size: 28px;
 }
 
-.focusdetalles{
-    display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
-}
 
-.focusfoto{
-    width: 33%;
-}
 .genrie{
     padding-top: 65px;
 }
 
-.avengersfoto div img{
-    width: 95%;
-    height: 290px;
-}
-.avengersfoto img{
-    width: 90%;
-    height: 245px;
-}
 .botonenviar{
     display: flex;
     flex-wrap: wrap;
@@ -138,6 +122,20 @@ section h2 {
 @media (max-width:420px){
 
 .atributoflex article{
+    width: 49.7%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.atributoflex2 article {
+    width: 49.7%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.atributoflex3 article{
     width: 49.7%;
     display: flex;
     flex-direction: column;
@@ -166,14 +164,6 @@ header article{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-.avengersfoto div img{
-    width: 95%;
-    height: 260px;
-}
-.avengersfoto img{
-    width: 97%;
-    height: 260px;
 }
 
 }
