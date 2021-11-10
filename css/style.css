@@ -8,6 +8,10 @@ img{
     width:100%;
 }
 
+ul li{
+    text-decoration: none;
+}
+
 .logo{
    margin: auto;
    width: 20%;
@@ -108,16 +112,7 @@ section h2 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.Responsivetext ul{
-    list-style-type: none;
-    text-decoration: none;
-    padding-left: 1px;
-}
-.Responsivetext{
-    list-style-type: none;
-    text-decoration: none;
-    padding-left: 1px;
-}
+
 
 @media (max-width:420px){
 
