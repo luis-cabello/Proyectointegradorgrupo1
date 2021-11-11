@@ -112,7 +112,18 @@ section h2 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+.atributoflexdetail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.atributoflexdetail div img{
+    width: 30%;
+}
+.atributoflexdetail div li {
+    width: 50%;
+    flex-direction: row;
+}
 
 @media (max-width:420px){
 
@@ -120,7 +131,7 @@ section h2 {
     width: 49.7%;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
 }
 
 .atributoflex2 article {

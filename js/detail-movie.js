@@ -34,11 +34,6 @@ fetch(url)
         trama.innerText += "" + datos.overview;
         duracion.innerText += "" + datos.runtime;
         genero.innerText += "" + datos.genres;
-        
-
-
-
-
 
 
     })
