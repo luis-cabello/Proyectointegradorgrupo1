@@ -22,7 +22,7 @@ fetch(url)
     <p>${datos.results[i].release_date}</p>
    
     <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles </a> 
-</article>
+<article/>
 `
 
         }
