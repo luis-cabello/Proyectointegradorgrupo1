@@ -17,6 +17,7 @@ const trama = document.querySelector(".trama");
 const genero = document.querySelector(".genero");
 const duracion = document.querySelector(".duracion");
 
+
 fetch(url)
 
     .then(function (respuesta) {
@@ -33,6 +34,7 @@ fetch(url)
         trama.innerText += "" + datos.overview;
         duracion.innerText += "" + datos.runtime;
         genero.innerText += "" + datos.genres;
+        
 
 
 

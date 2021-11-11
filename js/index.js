@@ -21,7 +21,7 @@ fetch(url)
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
    
-    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> detalles <a> 
+    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles <a> 
 </article>
 `
 
@@ -55,7 +55,7 @@ fetch(url2)
     </div>
     <h2>${datos.results[i].name}</h2>
     <p>${datos.results[i].first_air_date}</p>
-    <a href="detail-series.html?id=${datos.results[i].id}"> Detalles </a>
+    <a  class= "letrablanca" href="detail-series.html?id=${datos.results[i].id}"> Detalles </a>
 </article> 
 `
         }

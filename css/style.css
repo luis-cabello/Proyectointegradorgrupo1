@@ -8,8 +8,8 @@ img{
     width:100%;
 }
 
-ul li{
-    text-decoration: none;
+.bullet{
+list-style-type: none;
 }
 
 .logo{
