@@ -1,14 +1,10 @@
-//Lo mas visto en peliculas
+//peliculas recomendadas 
+console.log(location.search);
+let conviertoID3 = new URLSearchParams(location.search);
+let recomendadasid= conviertoID3.get("id");
+console.log(recomendadasid);
 
-console.log(location.search); //recupero la informacion de  la queryString y me fijo si esta en consola.
-
-let conviertoId = new URLSearchParams(location.search); // convierto la info a un objeto literal, algo mas manejable.
-
-let cadaPelicula = conviertoId.get("id"); //con el get triago una calve valor a la queryString y asi me aparece en el URL cada ID del perosnaje
-
-console.log(cadaPelicula); //Me fijo si esta todo bien en consola y si finalemente la informacion de cada pelicula se pudo pasar a un objeto literal.
-
-let url = "https://api.themoviedb.org/3/movie/" + cadaPelicula + "?api_key=7a176cc95147be6e695be2faf0e8ff9c";
+let url3 = ("https://api.themoviedb.org/3/movie/top_rated" +recomendadasid+ "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
 
 
 const imagen = document.querySelector("div img");
@@ -17,7 +13,6 @@ const parrafo = document.querySelector(".fecha");
 const trama = document.querySelector(".trama");
 const genero = document.querySelector(".genero");
 const duracion = document.querySelector(".duracion");
-
 
 fetch(url)
 
@@ -38,5 +33,3 @@ fetch(url)
 
 
     })
-
-

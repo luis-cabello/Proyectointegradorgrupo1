@@ -12,8 +12,8 @@ fetch(url)
 
             //Creo estructura y modifico HTML mediante innerHTML//
 
-            document.querySelector(".atributoflex2").innerHTML += `
-           
+            document.querySelector(".atributoflex2").innerHTML +=
+ `
 <article>
     <div class="foto">
             <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].title} "> 
@@ -87,7 +87,10 @@ fetch(url3)
     </div>
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
-</article> 
+    <a class="letrablanca" href="peliculas-Recomendadas.html?id=${datos.results[i].id}">Detalles</a> 
+    
+</article>
+
 `
-        }
+  }
     })
