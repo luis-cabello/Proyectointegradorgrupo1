@@ -21,8 +21,8 @@ fetch(url)
     <h2>${datos.results[i].title}</h2>
     <p>${datos.results[i].release_date}</p>
    
-    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}">Detalles</a> 
-</article>
+    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles </a> 
+<article/>
 `
 
         }
