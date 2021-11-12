@@ -9,7 +9,7 @@ let url = ("https://api.themoviedb.org/3/tv/" + serieId + "?api_key=7a176cc95147
 const titulo = document.querySelector("h2")
 const trama = document.querySelector(".trama")
 const fecha = document.querySelector(".fecha")
-const cantidadDeEpisodios = document.querySelector("cantidadEpisodios")
+const cantidadDeEpisodios = document.querySelector(".cantidadEpisodios")
 const genero = document.querySelector(".genero")
 const imagen = document.querySelector("div img")
 
@@ -28,7 +28,7 @@ fetch(url)
         titulo.innerText += "" + datos.original_name;
         trama.innerText += "" + datos.overview;
         fecha.innerText += "" + datos.release_date;
-        cantidadDeEpisodios.innerText += "" + datos.number_of_episodes
+        cantidadDeEpisodios.innerText += "" + datos.number_of_episodes;
 
 
 
