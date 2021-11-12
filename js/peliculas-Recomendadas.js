@@ -14,7 +14,7 @@ const trama = document.querySelector(".trama");
 const genero = document.querySelector(".genero");
 const duracion = document.querySelector(".duracion");
 
-fetch(url)
+fetch(url3)
 
     .then(function (respuesta) {
         return respuesta.json()
