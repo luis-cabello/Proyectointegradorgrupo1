@@ -4,7 +4,7 @@ let conviertoID3 = new URLSearchParams(location.search);
 let recomendadasid= conviertoID3.get("id");
 console.log(recomendadasid);
 
-let url3 = ("https://api.themoviedb.org/3/movie/top_rated" +recomendadasid+ "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+let url3 = (" https://api.themoviedb.org/3/movie/" +recomendadasid+ "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
 
 
 const imagen = document.querySelector("div img");
