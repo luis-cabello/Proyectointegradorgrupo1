@@ -92,5 +92,24 @@ fetch(url3)
 </article>
 
 `
-  }
-    })
+  }  
+
+  //Validar Formularios// 
+  let formulario =document.querySelector('form');
+  let inputfield =document.querySelector('.search');
+  let message =document.querySelector('.Message');
+
+  formulario.addEventListener('submit',function(evento){
+  evento.preventDefault();
+  console.log("no se envio")
+
+  if(inputfield.value == "" ){
+   Message.InnerText="no has ingresado ningun termino";
+   }else if(inputfield.value.length <3 ){
+   Message.InnerText=" Debes ingresar mas de 3 terminos";
+   }else{
+   this.submit();
+   }
+})
+
+})

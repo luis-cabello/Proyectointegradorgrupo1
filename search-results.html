@@ -12,158 +12,36 @@
 </head>
 
 <body class="letrablanca">
+
     <header>
         <article>
             <form action="search-results.html" method="GET" class="responsiveformulario">
                 <p><label for="Buscador"> </label> Buscador </p>
                 <div class="botonenviar">
-                 <p><input type="Buscador" id="buscador" name= "q" placeholder="Escriba aqui..."></p> 
+                 <p><input type="Buscador" id="buscador" name= "q" placeholder="Escriba aqui..." class="search"></p> 
                  <p><input type="submit" value="search"></p>
-               </div>  
+               </div>
            </form>
-          <p class="menu">| <a class="letrablanca" href="./index.html"> Home </a> | <a class="letrablanca"  href="./detail-movie.html"> Peliculas </a> |<a class="letrablanca" href= "./detail-series.html"> Series </a> | <a class="letrablanca" href="./peliculas-Recomendadas.html"> Recomendadas</a> | <a class="letrablanca"  href="./genries.html"> Generos </a> | <a class="letrablanca"  href="./favoritos.html"> Favoritos </a> | </p> 
+           <p class="message"></p>
+           <p class="menu">| <a class="letrablanca" href="./index.html"> Home </a> | <a class="letrablanca"  href="./genries.html"> Generos </a> | <a class="letrablanca"  href="./favoritos.html"> Favoritos </a> | </p> 
         </article> 
     </header>
     
     <h1 class="titulo"> VMovies </h1>
-    <h2>No se encontraron resultados para tu busqueda</h2>
 
-    <section class= "atributoflex">
-        <h1>Peliculas Recomendadas </h1>
-    
-        <article class="avengersfoto"> 
-            <div class="foto">
-                <img src="./img/The_Avengers 1 .webp" lt="Avengers 1 ">
-            </div>
-            <h2> Avengers </h2> 
-            <div class="heart"> <a  class="letrablanca" href="./favoritos.html"> <i class="far fa-heart"> </i> </a>    </div>
-            <p> 2012 </p>
-        </article>
-    
-        <article> 
-            <div class="foto">
-                <img src="./img/avengers end game .jpg"  alt="spider man far from home"> 
-            </div>
-            <h2>Avengers End Game</h2>
-            <div class="heart"> <a  class="letrablanca" href="./favoritos.html"> <i class="far fa-heart"> </i> </a>    </div>
-            <p> 2019 </p>
-        </article>
 
-        <article>  
-            <div class="foto">
-                <img src="./img/BSGCartelLatino.webp"  alt="Bastardos sin gloria ">   
-            </div>
-            <h2>Bastardos sin Gloria</h2>
-            <p> 2009 </p>
-        </article>
-
-        <article>
-            <div class="foto"> 
-             <img src="./img/Focus pelicula .jpg"  alt="Focus"  > 
-            </div>
-            <h2 > <a class="letrablanca" href="./focus.html"> Focus </a> </h2>
-            <p> 2015 </p>
-        </article>
-
-        <article> 
-            <div class="foto">
-                    <img src="./img/Far-from-home-spiderman.png"  alt="spider"> 
-            </div>
-            <h2 >Spider Man </h2>
-            <p> 2017 </p>
-        </article>
+    <section>
+         <h2 class="result-titulo"></h2>
     </section>
 
+    <h2 class="leyenda">Lo sentimos, no se han encontrado resultados para tu búsqueda.</h2>
 
-    <section class="atributoflex">
-        <h1> Series Populares</h1>
-   
-        <article> 
-            <div class="foto">
-                    <img src=".//img/suits 6.jpg"  alt=" Suits ">
-            </div>
-            <h2> <a class="letrablanca"  href="./Suits.html">Suits</a></h2>
-            <p> 2011 </p>
-        </article> 
+    <article class="Informacion-de-pelis">
 
-        <article> 
-            <div class="foto">
-                    <img src="./img/resizer.jpg"   alt="greys anatomy"> 
-            </div>
-            <h2>Greys Anatomy</h2>
-            <p > 2005 </p>
-        </article>
-
-        <article> 
-            <div class="foto">
-                    <img src="./img/poster-friends.webp"  alt="Friends"> 
-            </div>
-            <h2>Friends</h2>
-            <p> 1994 </p>
-        </article>
-
-        <article> 
-            <div class="foto">
-                     <img src=".//img/la casa de papel img 2.jpg"  alt=" La casa de papel">
-            </div>
-            <h2>La casa de papel </h2>
-            <p> 2017 </p>
-        </article>
-
-        <article>
-            <div class="foto">
-                    <img src="./img/modern fammily.jpg"  alt="Modern Familly"> 
-            </div>
-            <h2>Modern Familly</h2>
-            <p> 2009 </p>
-        </article>
+    </article>
     
-    </section>
 
-    <section class="atributoflex">
-        <h1>Lo mas visto en Peliculas </h1>
-
-        <article>
-            <div class="foto">
-                     <img src="./img/51mTtUGvUCL.jpg" alt=" Titanic "> 
-            </div>
-            <h2>Titanic</h2>
-            <p> 1998 </p>
-        </article>
-
-        <article>  
-            <div class="foto">
-                     <img src="./img/Avatar.jpg"   alt="Avatar "> 
-            </div>
-            <h2>Avatar </h2>
-            <p> 2009  </p>
-        </article>
-        <article>
-            <div class="foto">
-                    <img src="./img/Focus pelicula .jpg"  alt="Focus"> 
-            </div>
-            <h2> <a  class="letrablanca" href="./focus.html"> Focus </a> </h2>
-            <p> 2015 </p>
-        </article>
-
-        <article> 
-            <div class="foto">
-                    <img src="./img/son como ninos .webp"  alt="Son como ninos"> 
-            </div>
-            <h2>Son como ninos</h2>
-            <p> 2013 </p>
-        </article>
-
-        <article> 
-            <div class="foto">
-                     <img src="./img/BSGCartelLatino.webp"  alt=" Bastardos sin gloria "> 
-            </div>
-            <h2>Bastardos sin gloria </h2>
-            <p> 2009 </p>
-        </article>
-        
     
-    </section>
 
     <footer>
         <p class="buscador">Copyright <i> </i> VMovies </p>
@@ -173,19 +51,3 @@
     <script src="./js/results.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
