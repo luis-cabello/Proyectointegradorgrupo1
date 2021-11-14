@@ -28,13 +28,21 @@ fetch(url)
     .then(function (datos) {
         console.log(datos);
 
+       
+        for (let i = 0; i < datos.genres.length; i++) {
+            genero.innerHTML += `<a class= "letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ,${datos.genres[i].name}.<a/>` 
+            }
+
+
+        
+
         titulo.innerText += "" + datos.title;
         imagen.src = "https://image.tmdb.org/t/p/w342/" + datos.poster_path;
         imagen.alt = datos.title;
         parrafo.innerText += "" + datos.release_date;
         trama.innerText += "" + datos.overview;
         duracion.innerText += "" + datos.runtime;
-        genero.innerText += "" + datos.genres;
+        
 
 
     })

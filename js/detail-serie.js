@@ -23,12 +23,18 @@ fetch(url)
     .then(function (datos) {
         console.log(datos);
 
+
+        for (let i = 0; i < datos.genres.length; i++) {
+        genero.innerHTML += `<a class= "letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ${datos.genres[i].name}.<a/>` 
+        }
+
         imagen.src = "https://image.tmdb.org/t/p/w342/" + datos.poster_path;
         imagen.alt = datos.original_name;
         titulo.innerText += "" + datos.original_name;
         trama.innerText += "" + datos.overview;
         fecha.innerText += "" + datos.release_date;
         cantidadDeEpisodios.innerText += "" + datos.number_of_episodes;
+       
 
 
 

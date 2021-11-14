@@ -1,10 +1,10 @@
 //peliculas recomendadas 
 console.log(location.search);
 let conviertoID3 = new URLSearchParams(location.search);
-let recomendadasid= conviertoID3.get("id");
+let recomendadasid = conviertoID3.get("id");
 console.log(recomendadasid);
 
-let url3 = (" https://api.themoviedb.org/3/movie/" +recomendadasid+ "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+let url3 = (" https://api.themoviedb.org/3/movie/" + recomendadasid + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
 
 
 const imagen = document.querySelector("div img");
@@ -23,9 +23,11 @@ fetch(url3)
     .then(function (datos) {
         console.log(datos);
 
-    for(let i=0; i=datos.genres.length; i){
 
-    }
+
+        for (let i = 0; i < datos.genres.length; i++) {
+            genero.innerHTML += `<a class= "letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ,${datos.genres[i].name}.<a/>` 
+            }
 
 
         titulo.innerText += "" + datos.title;
@@ -34,7 +36,11 @@ fetch(url3)
         parrafo.innerText += "" + datos.release_date;
         trama.innerText += "" + datos.overview;
         duracion.innerText += "" + datos.runtime;
-        genero.innerText += "" + datos.genres;
+        
+       
 
 
+    })
+    .catch(function (error) {
+        console.log('el error fue' + error);
     })

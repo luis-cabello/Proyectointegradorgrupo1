@@ -23,6 +23,11 @@ list-style-type: none;
     color: white;
 }
 
+.genero{
+    list-style: none;
+    list-style-type: none;
+}
+
 .menu{
     text-align: right;
     font-size: 22px;
