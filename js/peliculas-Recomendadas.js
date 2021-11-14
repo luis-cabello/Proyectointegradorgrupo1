@@ -23,6 +23,11 @@ fetch(url3)
     .then(function (datos) {
         console.log(datos);
 
+    for(let i=0; i=datos.genres.length; i){
+
+    }
+
+
         titulo.innerText += "" + datos.title;
         imagen.src = "https://image.tmdb.org/t/p/w342/" + datos.poster_path;
         imagen.alt = datos.title;
