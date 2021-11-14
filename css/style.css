@@ -125,6 +125,17 @@ section h2 {
     flex-direction: row;
 }
 
+
+.peliculas_home {
+    width: 18%;
+    text-align: center; 
+    padding: 2%; 
+}
+.peliculas_home img {
+    width: 100%;
+    border-radius: 50%;
+}
+
 @media (max-width:420px){
 
 .atributoflex article{
