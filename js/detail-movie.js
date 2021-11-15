@@ -48,5 +48,24 @@ fetch(url)
     })
     .catch(function (error) {
         console.log('el error fue' + error);
+    
     })
+
+//Favoritos, primera parte. 
+
+const fav = document.querySelector(".agregoysaco") //Selecciono el boton que me lleva a la pagina de favoritos
+
+let favoritos = []; //Defino un array vacio para almacenar los favoritos.
+
+let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+
+if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
+    favoritos = JSON.parse(recuperoStorage);
+}
+
+if (favoritos.includes(cadaPelicula)) {
+    fav.innerHTML += `
+    quitar de favoritos
+    `
+}
 
