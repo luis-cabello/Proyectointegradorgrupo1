@@ -13,7 +13,7 @@ fetch(url)
             //Creo estructura y modifico HTML mediante innerHTML//
 
             document.querySelector(".atributoflex2").innerHTML +=
- `
+                `
 <article>
     <div class="foto">
             <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].title} "> 
@@ -60,7 +60,9 @@ fetch(url2)
 `
         }
     })
-
+    .catch(function (error) {
+        console.log('el error fue' + error);
+    })
 //Peliculas recomendadas//
 
 let url3 = ("https://api.themoviedb.org/3/movie/popular?api_key=7a176cc95147be6e695be2faf0e8ff9c")
@@ -92,24 +94,28 @@ fetch(url3)
 </article>
 
 `
-  }  
 
-  //Validar Formularios// 
-  let formulario =document.querySelector('form');
-  let inputfield =document.querySelector('.search');
-  let message =document.querySelector('.Message');
 
-  formulario.addEventListener('submit',function(evento){
-  evento.preventDefault();
-  console.log("no se envio")
+        }
+    
+    
 
-  if(inputfield.value == "" ){
-   Message.InnerText="no has ingresado ningun termino";
-   }else if(inputfield.value.length <3 ){
-   Message.InnerText=" Debes ingresar mas de 3 terminos";
-   }else{
-   this.submit();
-   }
-})
+        //Validar Formularios// 
+        let formulario = document.querySelector('form');
+        let inputfield = document.querySelector('.search');
+        let message = document.querySelector('.Message');
 
-})
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault();
+            console.log("no se envio")
+
+            if (inputfield.value == "") {
+                Message.InnerText = "no has ingresado ningun termino";
+            } else if (inputfield.value.length < 3) {
+                Message.InnerText = " Debes ingresar mas de 3 terminos";
+            } else {
+                this.submit();
+            }
+        })
+
+    })

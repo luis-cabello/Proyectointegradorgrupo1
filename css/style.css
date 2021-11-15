@@ -103,6 +103,11 @@ footer{
     min-height: 30vh;    
 }
 
+.generoletra{
+    font-size: 30px;
+    
+}
+
 section h2 {
     font-size: 28px;
 }

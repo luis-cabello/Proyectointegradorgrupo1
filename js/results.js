@@ -6,9 +6,9 @@ let queryStringObj = new URLSearchParams(queryString);
 let formulario = queryStringObj.get("search");
 
 let datoBuscado = document.querySelector(".result-titulo");
-datoBuscado.innerText = `Resultados para ${formulario}`
+datoBuscado.innerHTML += `Resultados para ${formulario}`
 
-let url = `https://api.themoviedb.org/3/search/tv/?api_key=7a176cc95147be6e695be2faf0e8ff9c=${formulario}`;
+let url = ` https://api.themoviedb.org/3/search/multi?api_key=7a176cc95147be6e695be2faf0e8ff9c=${formulario}`;
 
 fetch(url)
     .then(function (response) {
