@@ -21,15 +21,15 @@ fetch(url)
         console.log(data)
 
         for (let i=0; i<peliculasData.length; i++){
-            peliculas.innerHTML +=
-            `<artcile class="peliculas_home">
-            <a href="./detail-movie.html ?id=${peliculasData[i].id}"><img src="${peliculasData[i].poster_path}" alt="peliculas imagen"></a>
-            <h4><a href="./detail-movie.html ?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].name}</a></h4>
-            </artcile>
-            <artcile class="peliculas_home">
-            <a href="./detail-movie.html ?id=${peliculasData[i].id}"><img src="${peliculasData[i].poster_path}" alt="series imagen"></a>
+            peliculas.innerHTML += 
+            
+    
+            `<article>
+            <a href="./detail-movie.html?id=${peliculasData[i].id}"><img src="https://image.tmdb.org/t/p/w342/${peliculasData[i].poster_path}" alt="peliculas imagen"></a>
+            <h4><a href="./detail-movie.html?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].title}</a></h4>
+            </article>
             `
-           
+           console.log(peliculasData[i])
         
         }
      
