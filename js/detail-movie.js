@@ -1,5 +1,4 @@
 //Lo mas visto en peliculas
-
 console.log(location.search); //recupero la informacion de  la queryString y me fijo si esta en consola.
 
 let conviertoId = new URLSearchParams(location.search); // convierto la info a un objeto literal, algo mas manejable.
@@ -51,21 +50,31 @@ fetch(url)
     
     })
 
-//Favoritos, primera parte. 
+//FAVORITOS
+    const fav = document.querySelector(".agregoysaco") //Selecciono el boton que me lleva a la pagina de favoritos
 
-const fav = document.querySelector(".agregoysaco") //Selecciono el boton que me lleva a la pagina de favoritos
+    let favoritos = []; //Defino un array vacio para almacenar los favoritos.
+    
+    let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+    
+    if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
+        favoritos = JSON.parse(recuperoStorage);
+    }
 
-let favoritos = []; //Defino un array vacio para almacenar los favoritos.
+    if (favoritos.includes(cadaPelicula)) {
+        fav.innerHTML += `
+        quitar de favoritos 
+        <i class="fas fa-heart"> favoritos </i>`
+    }
 
-let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+    fav.addEventListener("click", function(e) {
 
-if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
-    favoritos = JSON.parse(recuperoStorage);
-}
+        e.preventDefault()
+        if (favoritos.includes(cadaPelicula)) {
+            
+            let aBorrar = favoritos.indexOf(cadaPelicula)
 
-if (favoritos.includes(cadaPelicula)) {
-    fav.innerHTML += `
-    quitar de favoritos
-    `
-}
+            favoritos.splice(aBorrar, 1)
 
+
+        }})
