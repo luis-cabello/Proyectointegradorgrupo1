@@ -17,20 +17,19 @@ fetch(url)
     .then(function (data) {
 
         let peliculasData= data.results;
-        let peliculas = document.querySelector(".Informacion-de-pelis");
-        let infopeliculas ="";
+        let peliculas = document.querySelector(".atributoflex3")
         console.log(data)
 
         for (let i=0; i<peliculasData.length; i++){
-            infopeliculas +=
+            peliculas.innerHTML +=
             `<artcile class="peliculas_home">
-            <a href="./detail-movie.html ?id=${peliculasData[i].id}"><img src="${peliculasData[i].peliculas.poster_path}" alt="peliculas imagen"></a>
-            <h4><a href="./detail-movie.html ?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].peliculas.name}</a></h4>
+            <a href="./detail-movie.html ?id=${peliculasData[i].id}"><img src="${peliculasData[i].poster_path}" alt="peliculas imagen"></a>
+            <h4><a href="./detail-movie.html ?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].name}</a></h4>
             </artcile>
             <artcile class="peliculas_home">
-            <a href="./detail-movie.html ?id=${peliculasData[i].peliculas.id}"><img src="${peliculasData[i].datos.poster_path}" alt="series imagen"></a>
+            <a href="./detail-movie.html ?id=${peliculasData[i].id}"><img src="${peliculasData[i].poster_path}" alt="series imagen"></a>
             `
-            peliculas.innerHTML += infopeliculas
+           
         
         }
      
