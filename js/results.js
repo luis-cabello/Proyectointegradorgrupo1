@@ -36,7 +36,7 @@ fetch(url)
         //Validar Formularios// 
         let formulario = document.querySelector('form');
         let inputfield = document.querySelector('.search');
-        let message = document.querySelector('.message');
+       
         
 
         formulario.addEventListener('submit', function (evento) {
@@ -44,9 +44,9 @@ fetch(url)
             console.log("no se envio")
 
             if (inputfield.value =="") {
-                message.innerText = "no has ingresado ningun termino";
+                confirm("no ha ingresado ningun termino, desea continuar?")
             } else if (inputfield.value.length < 3) {
-                message.innerText = "Debes ingresar mas de 3 terminos";
+                alert("Ingrese al menos 3 terminos")
             } else {
                 this.submit();
             }
