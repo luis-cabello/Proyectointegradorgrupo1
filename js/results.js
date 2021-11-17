@@ -25,8 +25,8 @@ fetch(url)
             
     
             `<article>
-            <a href="./detail-movie.html?id=${peliculasData[i].id}"><img src="https://image.tmdb.org/t/p/w342/${peliculasData[i].poster_path}" alt="peliculas imagen"></a>
-            <h4><a href="./detail-movie.html?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].title}</a></h4>
+            <a class= "letrablanca" href="./detail-movie.html?id=${peliculasData[i].id}"><img src="https://image.tmdb.org/t/p/w342/${peliculasData[i].poster_path}" alt="peliculas imagen"></a>
+            <h4><a class= "letrablanca" href="./detail-movie.html?id=${peliculasData[i].id}">Pelicula:${peliculasData[i].title}</a></h4>
             </article>
             `
            console.log(peliculasData[i])
