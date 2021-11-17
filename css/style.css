@@ -135,6 +135,33 @@ section h2 {
     flex-direction: row;
 }
 
+.atributoflexgenries h2{
+    width: 100%;
+}
+.atributoflexgenries article{
+    width:25%;
+}
+.atributoflexgenries {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.atributoflexgenries2 h2{
+    width: 100%;
+}
+.atributoflexgenries2 article{
+    width:25%;
+}
+.atributoflexgenries2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.result-titulo{
+    width: 100%;
+}
 
 .peliculas_home {
     width: 18%;

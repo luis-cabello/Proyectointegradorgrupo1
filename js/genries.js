@@ -41,7 +41,7 @@ fetch(UrlGs)
         console.log(datos);
         for (let i = 0; i < datos.genres.length; i++) {
 
-            document.querySelector(".atributoflex2").innerHTML += `
+            document.querySelector(".atributoflexgenries2").innerHTML += `
             <article class="generoletra">
             <ul class= "genero">
             <li> <a class="letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ${datos.genres[i].name} </a> </li>
@@ -57,3 +57,21 @@ fetch(UrlGs)
     .catch(function (error) {
         console.log('el error fue' + error);
     })
+        //Validar Formularios// 
+        let formulario = document.querySelector('form');
+        let inputfield = document.querySelector('.search');
+        let message = document.querySelector('.message');
+        
+
+        formulario.addEventListener('submit', function (evento) {
+            evento.preventDefault();
+            console.log("no se envio")
+
+            if (inputfield.value =="") {
+                message.innerText = "no has ingresado ningun termino";
+            } else if (inputfield.value.length < 3) {
+                message.innerText = "Debes ingresar mas de 3 terminos";
+            } else {
+                this.submit();
+            }
+        })
