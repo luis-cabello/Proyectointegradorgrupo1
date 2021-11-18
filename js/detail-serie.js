@@ -35,6 +35,78 @@ fetch(url)
         fecha.innerText += "" + datos.first_air_date;
         cantidadDeEpisodios.innerText += "" + datos.number_of_episodes;
     })
+
+    //Favoritos, primera parte. 
+
+const fav = document.querySelector(".fas fa-heart") //Selecciono el boton que me lleva a la pagina de favoritos
+
+let favoritos = []; //Defino un array vacio para almacenar los favoritos.
+
+let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+
+if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
+    favoritos = JSON.parse(recuperoStorage);
+}
+console.log(favoritos); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
+
+if (favoritos.length == 0) { //Si no hay favoritos en la lista me va a salir un articulo con un titulo que dica 'no hay favoritos en tu lista'
+    fav.innerHTML += `
+    <article> 
+    <h3> No hay favoritos en tu lista </h3>
+    </article>
+    `
+} 
+
+fav.addEventListener("click", function (e) {
+    e.preventDefault();
+
+if (favoritos.includes(serieId)) {
+    
+    let aBorrar = favoritos.indexOf(serieId)
+
+favoritos.splice(aBorrar, 1)
+
+
+}
+
+
+
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         //Validar Formularios// 
         let formulario = document.querySelector('form');
         let inputfield = document.querySelector('.search');

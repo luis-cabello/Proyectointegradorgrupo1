@@ -54,6 +54,8 @@ fetch(url)
 
 
 
+
+    
             //Validar Formularios// 
             let formulario = document.querySelector('form');
             let inputfield = document.querySelector('.search');

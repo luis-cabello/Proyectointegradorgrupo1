@@ -41,7 +41,7 @@ fetch(url)
             })
             .then(function (data) {
                 let seriesData = data.results;
-                let series = document.querySelector(".Series-results")
+                let series = document.querySelector(".atributoflex2")
                 console.log(data)
 
                 for (let i = 0; i < seriesData.length; i++) {

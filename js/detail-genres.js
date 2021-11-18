@@ -8,7 +8,7 @@ let genero = conviertoIdG.get('genres')
 
 console.log(idGp); //Me fijo si salio todo bien en consola, y si los datos me aparecen. 
 
-let urlDp = ("https://api.themoviedb.org/3/discover/movie/list?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp)
+let urlDp = ("https://api.themoviedb.org/3/discover/movie/list?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres" + idGp)
 
 //Tomo la informacion de la Api, y usamos fetch para comunicarnos con ella y poder manipularla. 
 
