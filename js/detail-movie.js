@@ -50,34 +50,10 @@ fetch(url)
     
     })
 
-//FAVORITOS
-    const fav = document.querySelector(".agregoysaco") //Selecciono el boton que me lleva a la pagina de favoritos
-
-    let favoritos = []; //Defino un array vacio para almacenar los favoritos.
-    
-    let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
-    
-    if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
-        favoritos = JSON.parse(recuperoStorage);
-    }
-
-    if (favoritos.includes(cadaPelicula)) {
-        fav.innerHTML += `
-        quitar de favoritos 
-        <i class="fas fa-heart"> favoritos </i>`
-    }
-
-    fav.addEventListener("click", function(e) {
-
-        e.preventDefault()
-        if (favoritos.includes(cadaPelicula)) {
-            
-            let aBorrar = favoritos.indexOf(cadaPelicula)
-
-            favoritos.splice(aBorrar, 1)
 
 
-        }})
+
+
             //Validar Formularios// 
             let formulario = document.querySelector('form');
             let inputfield = document.querySelector('.search');

@@ -6,12 +6,12 @@ console.log(serieId);
 
 let url = ("https://api.themoviedb.org/3/tv/" + serieId + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
 
-const titulo = document.querySelector("h2")
-const trama = document.querySelector(".trama")
-const fecha = document.querySelector(".fecha")
-const cantidadDeEpisodios = document.querySelector(".cantidadEpisodios")
-const genero = document.querySelector(".genero")
-const imagen = document.querySelector("div img")
+const titulo = document.querySelector("h2");
+const trama = document.querySelector(".trama");
+const fecha = document.querySelector(".fecha");
+const cantidadDeEpisodios = document.querySelector(".cantidadEpisodios");
+const genero = document.querySelector(".genero");
+const imagen = document.querySelector("div img");
 
 
 fetch(url)
@@ -43,12 +43,12 @@ fetch(url)
 
         formulario.addEventListener('submit', function (evento) {
             evento.preventDefault();
-            console.log("no se envio")
+            console.log("no se envio");
 
             if (inputfield.value =="") {
                 confirm("no ha ingresado ningun termino, desea continuar?")
             } else if (inputfield.value.length < 3) {
-                alert("Ingrese al menos 3 terminos")
+                alert("Ingrese al menos 3 terminos");
             } else {
                 this.submit();
             }

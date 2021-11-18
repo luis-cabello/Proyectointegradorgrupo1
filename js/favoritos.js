@@ -25,6 +25,8 @@ if (favoritos.length == 0) { //Si no hay favoritos en la lista me va a salir un 
 
 }
 
+
+
 let url = `https://api.themoviedb.org/3/movie/${cadaPelicula}?api_key=7a176cc95147be6e695be2faf0e8ff9ccff&language=en-US`
 
 fetch(url)
@@ -48,6 +50,17 @@ fetch(url)
  .catch(function(error) {
      'el error fue' + error
     })
+
+
+
+
+
+
+
+
+
+
+
             //Validar Formularios// 
             let formulario = document.querySelector('form');
             let inputfield = document.querySelector('.search');

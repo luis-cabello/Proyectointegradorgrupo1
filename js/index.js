@@ -104,8 +104,6 @@ fetch(url3)
         let formulario = document.querySelector('form');
         let inputfield = document.querySelector('.search');
        
-        
-
         formulario.addEventListener('submit', function (evento) {
             evento.preventDefault();
             console.log("no se envio")
@@ -117,6 +115,7 @@ fetch(url3)
             } else {
                 this.submit();
             }
-        })
 
-    })
+        
+
+        })})
