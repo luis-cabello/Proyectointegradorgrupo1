@@ -11,12 +11,25 @@ console.log(idGp); //Me fijo si salio todo bien en consola, y si los datos me ap
 let url = "";
 let urlNg = "";
 
-urlNg = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres="
+urlNg = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_"
 
 fetch(urlNg)
 
-    .then()
+    .then(function (respuesta) {
+        return respuesta.json();
+    })
+    .then(function (datos) {
+        console.log(datos);
+        for (let i = 0; i < datos.genres_ids; i++) {
 
+            document.querySelector("atributoflex_detail_genries").innerHTML += 
+            `
+            <h2 class="letrablanca" id=${datos.genres[i].id}>Detalle de:${datos.genres[i].name}</h2>
+            
+            `
+        }
+        
+    })
 
 if (tipo == "movie") {
     url = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp
