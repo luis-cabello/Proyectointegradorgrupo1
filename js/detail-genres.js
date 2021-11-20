@@ -9,9 +9,11 @@ console.log(tipo);
 console.log(idGp); //Me fijo si salio todo bien en consola, y si los datos me aparecen. 
 
 let url = "";
-let urlNg = "";
 
-urlNg = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_"
+const titulo = document.querySelector(".titulo");
+const seccion = document.querySelector(".atributoflex2")
+
+urlNg = "https://api.themoviedb.org/3/genre/movie/list?api_key=7a176cc95147be6e695be2faf0e8ff9c"
 
 fetch(urlNg)
 
@@ -20,16 +22,20 @@ fetch(urlNg)
     })
     .then(function (datos) {
         console.log(datos);
-        for (let i = 0; i < datos.genres_ids; i++) {
+       
+        for(let i=0; i < datos.genres.length; i++){
+        titulo.innerText += "" + datos.genres[i].name
+       }
+         
+ 
 
-            document.querySelector("atributoflex_detail_genries").innerHTML += 
-            `
-            <h2 class="letrablanca" id=${datos.genres[i].id}>Detalle de:${datos.genres[i].name}</h2>
-            
-            `
-        }
-        
-    })
+
+})
+
+
+
+
+
 
 if (tipo == "movie") {
     url = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp
@@ -45,7 +51,19 @@ fetch(url)
     })
 
     .then(function (datos) {
-        console.log(datos);
+        console.log(datos.results);
+
+for(let i=0; i = datos.results.length; i++){
+    seccion.innerHTML += 
+    `<article>
+    <div class="foto">
+            <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].original_title} "> 
+    </div>
+    <h2>${datos.results[i].original_title}</h2>
+    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles </a> 
+<article/>`
+}
+       
 
 
 

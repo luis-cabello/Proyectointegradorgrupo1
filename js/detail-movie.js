@@ -52,48 +52,50 @@ fetch(url)
 
 
 //Favoritos, primera parte. 
+const favP = document.querySelector(".agregoysaco a")
 
-const fav = document.querySelector(".agregoysaco a") //Selecciono el boton que me lleva a la pagina de favoritos
+let = favoritosP = [];
 
-let favoritosP = []; //Defino un array vacio para almacenar los favoritos, para que no falle, puede pasar que nunca nadie eligio un favorito.
+let recuperoStoragep = localStorage.getItem("favoritosP");
 
-let recuperoStorage = localStorage.getItem("favoritosP"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
-
-if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
-    favoritosP = JSON.parse(recuperoStorage);
+if (recuperoStoragep && recuperoStoragep != null) {
+    favoritosP = JSON.parse(recuperoStoragep)
 }
-console.log(favoritosP); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
+console.log(favoritosP);
 
-fav.addEventListener("click", function (e) {
+if (favoritosP.includes(cadaPelicula)) {
+    favP.innerHTML = `
+     <i class="fas fa-heart"> </i> Sacar de favoritos`
+}
+
+
+favP.addEventListener("click", function(e) {
     e.preventDefault();
 
-    if (favoritosP.includes(cadaPelicula)) {
-        fav.innerHTML = ` 
+
+if (favoritosP.includes(cadaPelicula)) {
+    
+    let aBorrarp = favoritosP.indexOf(cadaPelicula)
+
+    favoritosP.splice(aBorrarp, 1)
+
+    favP.innerHTML = `
     <i class="fas fa-heart"> </i> Agregar a favoritos:`
 
-        let aBorrar = favoritosP.indexOf(cadaPelicula)
+} else {
 
-        favoritosP.splice(aBorrar, 1);
+favoritosP.push(cadaPelicula)
 
+favP.innerHTML = ` 
+<i class="fas fa-heart"> </i> Sacar de favoritos:`
 
-    } else {
-        fav.innerHTML = ` 
-    <i class="fas fa-heart"> </i> Sacar de favoritos`
+}
 
-        favoritosP.push(cadaPelicula)
-    }
+let favStoragep = JSON.stringify(favoritosP)
 
+    localStorage.setItem("favoritosP", favStoragep)
 
-    let favStorage = JSON.stringify(cadaPelicula)
-
-    localStorage.setItem("favoritosP", favStorage)
-
-
-    console.log(favStorage);
-
-})
-
-
+});
 
 
 
