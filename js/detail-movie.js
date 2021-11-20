@@ -47,29 +47,77 @@ fetch(url)
     })
     .catch(function (error) {
         console.log('el error fue' + error);
-    
+
     })
 
 
+//Favoritos, primera parte. 
+
+const fav = document.querySelector(".agregoysaco a") //Selecciono el boton que me lleva a la pagina de favoritos
+
+let favoritosP = []; //Defino un array vacio para almacenar los favoritos, para que no falle, puede pasar que nunca nadie eligio un favorito.
+
+let recuperoStorage = localStorage.getItem("favoritosP"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+
+if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
+    favoritosP = JSON.parse(recuperoStorage);
+}
+console.log(favoritosP); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
+
+fav.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (favoritosP.includes(cadaPelicula)) {
+        fav.innerHTML = ` 
+    <i class="fas fa-heart"> </i> Agregar a favoritos:`
+
+        let aBorrar = favoritosP.indexOf(cadaPelicula)
+
+        favoritosP.splice(aBorrar, 1);
+
+
+    } else {
+        fav.innerHTML = ` 
+    <i class="fas fa-heart"> </i> Sacar de favoritos`
+
+        favoritosP.push(cadaPelicula)
+    }
+
+
+    let favStorage = JSON.stringify(cadaPelicula)
+
+    localStorage.setItem("favoritosP", favStorage)
+
+
+    console.log(favStorage);
+
+})
 
 
 
 
-    
-            //Validar Formularios// 
-            let formulario = document.querySelector('form');
-            let inputfield = document.querySelector('.search');
-          
-    
-            formulario.addEventListener('submit', function (evento) {
-                evento.preventDefault();
-                console.log("no se envio")
-    
-                if (inputfield.value =="") {
-                    confirm("no ha ingresado ningun termino, desea continuar?")
-                } else if (inputfield.value.length < 3) {
-                    alert("Ingrese al menos 3 terminos")
-                } else {
-                    this.submit();
-                }
-            })
+
+
+
+
+
+
+
+
+//Validar Formularios// 
+let formulario = document.querySelector('form');
+let inputfield = document.querySelector('.search');
+
+
+formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+    console.log("no se envio")
+
+    if (inputfield.value == "") {
+        confirm("no ha ingresado ningun termino, desea continuar?")
+    } else if (inputfield.value.length < 3) {
+        alert("Ingrese al menos 3 terminos")
+    } else {
+        this.submit();
+    }
+})

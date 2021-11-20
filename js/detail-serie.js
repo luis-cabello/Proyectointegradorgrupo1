@@ -36,92 +36,99 @@ fetch(url)
         cantidadDeEpisodios.innerText += "" + datos.number_of_episodes;
     })
 
-    //Favoritos, primera parte. 
+//Favoritos, primera parte. 
 
-const fav = document.querySelector(".fas fa-heart") //Selecciono el boton que me lleva a la pagina de favoritos
+const fav = document.querySelector(".agregoysaco a") //Selecciono el boton que me lleva a la pagina de favoritos
 
-let favoritos = []; //Defino un array vacio para almacenar los favoritos.
+let favoritosS = []; //Defino un array vacio para almacenar los favoritos, para que no falle, puede pasar que nunca nadie eligio un favorito.
 
-let recuperoStorage = localStorage.getItem("favoritos"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+let recuperoStorage = localStorage.getItem("favoritosS"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
 
 if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
-    favoritos = JSON.parse(recuperoStorage);
+    favoritosS = JSON.parse(recuperoStorage);
 }
-console.log(favoritos); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
+console.log(favoritosS); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
 
-if (favoritos.length == 0) { //Si no hay favoritos en la lista me va a salir un articulo con un titulo que dica 'no hay favoritos en tu lista'
-    fav.innerHTML += `
-    <article> 
-    <h3> No hay favoritos en tu lista </h3>
-    </article>
-    `
-} 
+if (favoritosS.includes(serieId)) {
+    fav.innerHTML = ` 
+    <i class="fas fa-heart"> </i> Sacar de favoritos`
+}
+
+
 
 fav.addEventListener("click", function (e) {
     e.preventDefault();
 
-if (favoritos.includes(serieId)) {
-    
-    let aBorrar = favoritos.indexOf(serieId)
+    if (favoritosS.includes(serieId)) {
 
-favoritos.splice(aBorrar, 1)
+        let aBorrar = favoritosS.indexOf(serieId)
 
-
-}
-
-
-
-
-
-
-
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //Validar Formularios// 
-        let formulario = document.querySelector('form');
-        let inputfield = document.querySelector('.search');
-        let message = document.querySelector('.message');
+        favoritosS.splice(aBorrar, 1)
         
+        fav.innerHTML = `
+        <i class="fas fa-heart"> </i> Agregar a favoritos:`
 
-        formulario.addEventListener('submit', function (evento) {
-            evento.preventDefault();
-            console.log("no se envio");
 
-            if (inputfield.value =="") {
-                confirm("no ha ingresado ningun termino, desea continuar?")
-            } else if (inputfield.value.length < 3) {
-                alert("Ingrese al menos 3 terminos");
-            } else {
-                this.submit();
-            }
-        })
+    } else {
+       
+        favoritosS.push(serieId)
+
+    
+        fav.innerHTML = ` 
+        <i class="fas fa-heart"> </i> Sacar de favoritos:`
+
+    }
+
+    let favStorage = JSON.stringify(favoritosS)
+
+    localStorage.setItem("favoritosS", favStorage)
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //Validar Formularios// 
+    let formulario = document.querySelector('form');
+    let inputfield = document.querySelector('.search');
+    let message = document.querySelector('.message');
+
+
+    formulario.addEventListener('submit', function (evento) {
+        evento.preventDefault();
+        console.log("no se envio");
+
+        if (inputfield.value == "") {
+            confirm("no ha ingresado ningun termino, desea continuar?")
+        } else if (inputfield.value.length < 3) {
+            alert("Ingrese al menos 3 terminos");
+        } else {
+            this.submit();
+        }
+    });

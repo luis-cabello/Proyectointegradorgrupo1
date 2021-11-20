@@ -14,7 +14,7 @@ fetch(UrlGp)
             document.querySelector("section").innerHTML += `
             <article class="generoletra">
             <ul class= "genero">
-            <li> <a class="letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ${datos.genres[i].name} </a> </li>
+            <li> <a class="letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}&type=movie"> ${datos.genres[i].name} </a> </li>
             </ul>
             <article>
             `
@@ -44,7 +44,7 @@ fetch(UrlGs)
             document.querySelector(".atributoflexgenries2").innerHTML += `
             <article class="generoletra">
             <ul class= "genero">
-            <li> <a class="letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}"> ${datos.genres[i].name} </a> </li>
+            <li> <a class="letrablanca" href="./detalles-genero.html?id=${datos.genres[i].id}&type=tv"> ${datos.genres[i].name} </a> </li>
             </ul>
             <article>
             `
