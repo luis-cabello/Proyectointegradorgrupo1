@@ -10,38 +10,30 @@ console.log(idGp); //Me fijo si salio todo bien en consola, y si los datos me ap
 
 let url = "";
 
-const titulo = document.querySelector(".titulo");
 const seccion = document.querySelector(".atributoflex2")
 
-urlNg = "https://api.themoviedb.org/3/genre/movie/list?api_key=7a176cc95147be6e695be2faf0e8ff9c"
+urlNg = `https://api.themoviedb.org/3/genre/${idGp}?api_key=7a176cc95147be6e695be2faf0e8ff9c&with`
+let titulo=document.querySelector(".titulo");
+
 
 fetch(urlNg)
 
-    .then(function (respuesta) {
-        return respuesta.json();
-    })
-    .then(function (datos) {
-        console.log(datos);
-       
-        for(let i=0; i < datos.genres.length; i++){
-        titulo.innerText += "" + datos.genres[i].name
-       }
-         
- 
-
-
+.then(function (respuesta) {
+    return respuesta.json();
+})
+.then(function(datos){
+    titulo.innerHTML =`${datos.name}`;
+})
+.catch(function (error) {
+    'el error fue' + error
 })
 
 
-
-
-
-
 if (tipo == "movie") {
-    url = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp
+    url = "https://api.themoviedb.org/3/discover/movie?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp ;
 
 } else if (tipo == "tv") {
-    url = "https://api.themoviedb.org/3/discover/tv?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp
+    url = "https://api.themoviedb.org/3/discover/tv?api_key=7a176cc95147be6e695be2faf0e8ff9c&with_genres=" + idGp ;
 
 }
 fetch(url)
@@ -53,20 +45,18 @@ fetch(url)
     .then(function (datos) {
         console.log(datos.results);
 
+        let Detailgeneros= document.querySelector(".atributoflexgenero2")
+
 for(let i=0; i = datos.results.length; i++){
-    seccion.innerHTML += 
+    Detailgeneros.innerHTML += 
     `<article>
     <div class="foto">
             <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].original_title} "> 
     </div>
     <h2>${datos.results[i].original_title}</h2>
     <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles </a> 
-<article/>`
+     <article/>`
 }
-       
-
-
-
     })
 
     .catch(function (error) {
