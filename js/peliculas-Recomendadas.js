@@ -38,6 +38,72 @@ fetch(url3)
         duracion.innerText += "" + datos.runtime;
         
        
+//Favoritos, primera parte. 
+const fav = document.querySelector(".agregoysaco a")
+
+let favoritos = [];
+
+let recuperoStorage = localStorage.getItem("favoritos");
+
+if (recuperoStorage && recuperoStorage != null) {
+    favoritos = JSON.parse(recuperoStorage)
+}
+console.log(favoritos);
+
+if (favoritos.includes(cadaPelicula)) {
+    fav.innerHTML = `
+     <i class="fas fa-heart"> </i> Sacar de favoritos`
+}
+
+
+fav.addEventListener("click", function(e) {
+    e.preventDefault();
+
+
+if (favoritos.includes(cadaPelicula)) {
+    
+    let aBorrarp = favoritos.indexOf(cadaPelicula)
+
+    favoritos.splice(aBorrarp, 1)
+
+    fav.innerHTML = `
+    <i class="fas fa-heart"> </i> Agregar a favoritos:`
+
+} else {
+
+favoritos.push(cadaPelicula)
+
+fav.innerHTML = ` 
+<i class="fas fa-heart"> </i> Sacar de favoritos:`
+
+}
+
+let favStorage = JSON.stringify(favoritos);
+
+localStorage.setItem("favoritos", favStorage);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     })
