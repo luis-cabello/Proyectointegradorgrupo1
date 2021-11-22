@@ -85,7 +85,7 @@ for(let i = 0; i < datos.results.length; i++){
             <img src="https://image.tmdb.org/t/p/w342/${datos.results[i].poster_path}"  alt="${datos.results[i].original_name} "> 
     </div>
     <h2>${datos.results[i].original_name}</h2>
-    <a class="letrablanca" href="detail-movie.html?id=${datos.results[i].id}"> Detalles </a> 
+    <a class="letrablanca" href="detail-series.html?id=${datos.results[i].id}"> Detalles </a> 
      <article/>`
 
     }
