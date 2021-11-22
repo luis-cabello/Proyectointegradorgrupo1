@@ -2,7 +2,6 @@
   //  let cargaPrevia = Document.querySelector(`.spinCarga`);
    // cargaPrevia.style.display ="none"
 //})
-
 //retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
 let queryString = location.search;
 //la transformamos en Objeto literal
@@ -10,8 +9,10 @@ let queryStringObj = new URLSearchParams(queryString);
 //name del campo input del formulario
 let formulario = queryStringObj.get("q");
 
-let datoBuscado = document.querySelector(".result-titulo");
+
+ let datoBuscado = document.querySelector(".result-titulo");
 datoBuscado.innerHTML += `Resultados para ${formulario}`
+
 
 let url = ` https://api.themoviedb.org/3/search/multi?api_key=7a176cc95147be6e695be2faf0e8ff9c&query=${formulario}`;
 
@@ -63,7 +64,6 @@ fetch(url)
 
 
     })
-
 
 
 
