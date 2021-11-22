@@ -42,10 +42,10 @@ const fav = document.querySelector(".agregoysaco a") //Selecciono el boton que m
 
 let favoritosS = []; //Defino un array vacio para almacenar los favoritos, para que no falle, puede pasar que nunca nadie eligio un favorito.
 
-let recuperoStorage = localStorage.getItem("favoritosS"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
+let recuperoStorageS = localStorage.getItem("favoritosS"); //Recuperamos datos del storage haber si hay favoritos y los agarro con getitem
 
-if (recuperoStorage && recuperoStorage != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
-    favoritosS = JSON.parse(recuperoStorage);
+if (recuperoStorageS && recuperoStorageS != null) { //si hay favoritos en el local storage, voy a tener que transfomar de string a array
+    favoritosS = JSON.parse(recuperoStorageS);
 }
 console.log(favoritosS); //Me fijo si la informacion se convirtio en un Array, me doy cuenta si tiene []
 
@@ -79,9 +79,9 @@ fav.addEventListener("click", function (e) {
 
     }
 
-    let favStorage = JSON.stringify(favoritosS)
+    let favStorageS = JSON.stringify(favoritosS)
 
-    localStorage.setItem("favoritosS", favStorage)
+    localStorage.setItem("favoritosS", favStorageS)
 
 });
 
