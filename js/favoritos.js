@@ -1,7 +1,7 @@
 //local storage peliculas
 
 let favoritos = [];
-let favoritosS = []
+let favoritosS = [];
 // si fue creada la clave "favoritos" en localStorage
 if (localStorage.getItem("favoritos")) {
 
@@ -33,8 +33,8 @@ if( favoritos.length == 0   ) {
   // muestra leyenda apropiada en un "article"
   // y un botón "volver"
   seccion.innerHTML += `
-  <h2> No hay favoritos en tu lista </h2>
-  <p> <a class="letrablanca" href= "./index.html"> volver <-- </a>  </p>`
+  <h2> </h2>
+  <p> </p>`
     
 } else { // Si SI hay favoritos en el array "favoritos"
     
@@ -64,10 +64,19 @@ function buscarYMostrarFavoritos(cadaPelicula) {
 
     })
     .then( function( datos ) {
+     console.log(datos);
+     
+seccion.innerHTML += `<article>
+<div class="foto">
+        <img src="https://image.tmdb.org/t/p/w342/${datos.poster_path}"  alt="${datos.title} "> 
+</div>
+<h2>${datos.title}</h2>
+<p>${datos.release_date}</p>
 
-    console.log(datos);
+<a class="letrablanca" href="detail-movie.html?id=${datos.id}"> Detalles </a> 
+<article/>`
 
-      
+
     })
     .catch( function(error) {
         console.log(error);
@@ -118,13 +127,13 @@ if (localStorage.getItem("favoritosS")) {
     */
     for( i = 0; i < favoritosS.length; i++ ) {
   
-      buscarYMostrarFavoritos(favoritosS[i])
+      buscarYMostrarFavoritosS(favoritosS[i])
   
     }
       
   }
   
-  function buscarYMostrarFavoritos(serieId) {
+  function buscarYMostrarFavoritosS(serieId) {
   
     // se guarda endpoint en variable "url"
     // para que el pedido al servidor quede más claro
@@ -139,9 +148,18 @@ if (localStorage.getItem("favoritosS")) {
   
       })
       .then( function( datos ) {
-  
-      console.log(datos);
-  
+       console.log(datos);
+       seccionS.innerHTML += `<article> 
+
+       <div class="foto">
+               <img src="https://image.tmdb.org/t/p/w342/${datos.poster_path}"  alt="${datos.name}">
+       </div>
+       <h2>${datos.name}</h2>
+       <p>${datos.first_air_date}</p>
+       <a  class= "letrablanca" href="detail-series.html?id=${datos.id}"> Detalles </a>
+   </article> `
+
+ 
         
       })
       .catch( function(error) {

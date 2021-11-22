@@ -54,7 +54,7 @@ fetch(url)
 //Favoritos, primera parte. 
 const fav = document.querySelector(".agregoysaco a")
 
-let = favoritos = [];
+let favoritos = [];
 
 let recuperoStorage = localStorage.getItem("favoritos");
 
@@ -91,9 +91,9 @@ fav.innerHTML = `
 
 }
 
-let favStorage = JSON.stringify(favoritos)
+let favStorage = JSON.stringify(favoritos);
 
-    localStorage.setItem("favoritos", favStorage)
+localStorage.setItem("favoritos", favStorage);
 
 });
 

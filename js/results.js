@@ -1,3 +1,8 @@
+//Window.addEventListener(`load`,function () {
+  //  let cargaPrevia = Document.querySelector(`.spinCarga`);
+   // cargaPrevia.style.display ="none"
+//})
+
 //retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
 let queryString = location.search;
 //la transformamos en Objeto literal
