@@ -57,18 +57,19 @@ fetch(UrlGs)
     .catch(function (error) {
         console.log('el error fue' + error);
     })
-       //Validar Formularios// 
+    //Validar Formularios// 
 let form = document.querySelector('form');
 let inputfield = document.querySelector('.search');
 let Message = document.querySelector(".message")
+
 form.addEventListener('submit', function (evento) {
     evento.preventDefault();
     console.log("no se envio")
 
     if (inputfield.value == "") {
-       Message.innerText("no ha ingresado ningun termino, desea continuar?")
+       Message.innerText = "no ha ingresado ningun termino, desea continuar?";
     } else if (inputfield.value.length < 3) {
-        Message.innerText("Ingrese al menos 3 terminos")
+        Message.innerText= "Ingrese al menos 3 terminos";
     } else {
         this.submit();
     }
