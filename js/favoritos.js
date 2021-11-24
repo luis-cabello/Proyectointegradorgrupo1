@@ -2,6 +2,7 @@
 
 let favoritos = [];
 let favoritosS = [];
+let favoritosR = [];
 // si fue creada la clave "favoritos" en localStorage
 if (localStorage.getItem("favoritos")) {
 
@@ -167,6 +168,102 @@ if (localStorage.getItem("favoritosS")) {
       });
   
   }
+
+//Recomendadas
+
+if (localStorage.getItem("favoritosR")) {
+
+  // verifica cómo las propiedades llegan como strings
+  
+
+  // guarda datos del storage...
+  
+  
+  // y los asigna a la variable "favoritos"
+  // transformados en array
+  let recuperoStorageR = localStorage.getItem("favoritosR")
+  
+  favoritosR = JSON.parse(recuperoStorageR)
+  // verifica en consola la transformación a array
+  
+console.log(favoritosR);
+}
+
+
+// Contenedor de la lista de favoritos
+const seccionR = document.querySelector(".atributoflex3")
+
+
+
+// si NO hay favs en la lista
+if( favoritosR.length == 0   ) {
+
+  // muestra leyenda apropiada en un "article"
+  // y un botón "volver"
+  seccionR.innerHTML += `
+  <h2> No hay favoritos en tu lista </h2>
+  <p> <a class="letrablanca" href= "./index.html"> volver <-- </a>  </p>`
+    
+} else { // Si SI hay favoritos en el array "favoritos"
+    
+  /*
+  busca cada uno de los gifs y los imprime en pantalla
+  */
+  for( i = 0; i < favoritosR.length; i++ ) {
+
+    buscarYMostrarFavoritosR(favoritosR[i])
+
+  }
+    
+}
+
+function buscarYMostrarFavoritosR(recomendadasid) {
+
+  // se guarda endpoint en variable "url"
+  // para que el pedido al servidor quede más claro
+  
+  let urlR= ("https://api.themoviedb.org/3/movie/" + recomendadasid + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+  // pedido al servidor
+  fetch(urlR)
+    .then( function( respuesta ) {
+
+    return respuesta.json();
+      
+
+    })
+    .then( function( datos ) {
+     console.log(datos);
+     seccionR.innerHTML += `<article>
+     <div class="foto">
+             <img src="https://image.tmdb.org/t/p/w342/${datos.poster_path}"  alt="${datos.title} "> 
+     </div>
+     <h2>${datos.title}</h2>
+     <p>${datos.release_date}</p>
+    
+     <a class="letrablanca" href="detail-movie.html?id=${datos.id}"> Detalles </a> 
+ <article/> `
+
+
+      
+    })
+    .catch( function(error) {
+        console.log(error);
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

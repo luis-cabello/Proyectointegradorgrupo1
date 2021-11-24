@@ -41,16 +41,16 @@ fetch(url3)
 //Favoritos, primera parte. 
 const fav = document.querySelector(".agregoysaco a")
 
-let favoritos = [];
+let favoritosR = [];
 
-let recuperoStorage = localStorage.getItem("favoritos");
+let recuperoStorageR = localStorage.getItem("favoritosR");
 
-if (recuperoStorage && recuperoStorage != null) {
-    favoritos = JSON.parse(recuperoStorage)
+if (recuperoStorageR && recuperoStorageR != null) {
+    favoritosR = JSON.parse(recuperoStorageR)
 }
-console.log(favoritos);
+console.log(favoritosR);
 
-if (favoritos.includes(cadaPelicula)) {
+if (favoritosR.includes(recomendadasid)) {
     fav.innerHTML = `
      <i class="fas fa-heart"> </i> Sacar de favoritos`
 }
@@ -60,27 +60,27 @@ fav.addEventListener("click", function(e) {
     e.preventDefault();
 
 
-if (favoritos.includes(cadaPelicula)) {
+if (favoritosR.includes(recomendadasid)) {
     
-    let aBorrarp = favoritos.indexOf(cadaPelicula)
+    let aBorrarR = favoritosR.indexOf(recomendadasid)
 
-    favoritos.splice(aBorrarp, 1)
+    favoritosR.splice(aBorrarR, 1)
 
     fav.innerHTML = `
     <i class="fas fa-heart"> </i> Agregar a favoritos:`
 
 } else {
 
-favoritos.push(cadaPelicula)
+favoritosR.push(recomendadasid)
 
 fav.innerHTML = ` 
 <i class="fas fa-heart"> </i> Sacar de favoritos:`
 
 }
 
-let favStorage = JSON.stringify(favoritos);
+let favStorageR = JSON.stringify(favoritosR);
 
-localStorage.setItem("favoritos", favStorage);
+localStorage.setItem("favoritosR", favStorageR);
 
 });
 
