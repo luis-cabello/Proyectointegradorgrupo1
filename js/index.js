@@ -100,21 +100,21 @@ fetch(url3)
     
     
 
-        //Validar Formularios// 
-        let formulario = document.querySelector('form');
-        let inputfield = document.querySelector('.search');
-       
-        formulario.addEventListener('submit', function (evento) {
-            evento.preventDefault();
-            console.log("no se envio")
+       //Validar Formularios// 
+let form = document.querySelector('form');
+let inputfield = document.querySelector('.search');
+let Message = document.querySelector(".message")
+form.addEventListener('submit', function (evento) {
+    evento.preventDefault();
+    console.log("no se envio")
 
-            if (inputfield.value =="") {
-                confirm("no ha ingresado ningun termino, desea continuar?")
-            } else if (inputfield.value.length < 3) {
-                alert("Ingrese al menos 3 terminos")
-            } else {
-                this.submit();
-            }
+    if (inputfield.value == "") {
+       Message.innerText("no ha ingresado ningun termino, desea continuar?")
+    } else if (inputfield.value.length < 3) {
+        Message.innerText("Ingrese al menos 3 terminos")
+    } else {
+        this.submit();
+    }
 
         
 

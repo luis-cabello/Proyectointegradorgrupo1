@@ -1,7 +1,3 @@
-//Window.addEventListener(`load`,function () {
-  //  let cargaPrevia = Document.querySelector(`.spinCarga`);
-   // cargaPrevia.style.display ="none"
-//})
 //retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
 let queryString = location.search;
 //la transformamos en Objeto literal
@@ -53,7 +49,7 @@ fetch(url)
                 for (let i = 0; i < seriesData.length; i++) {
                     series.innerHTML +=
                         `<article>
-      <a class= "letrablanca" href="./detail-series.html?id=${seriesData[i].id}"><img src="https://image.tmdb.org/t/p/w342/${seriesData[i].poster_path}" alt="series imagen"></a>
+      <a class= "letrablanca" href="./detail-series.html?id=$ {seriesData[i].id}"><img src="https://image.tmdb.org/t/p/w342/${seriesData[i].poster_path}" alt="series imagen"></a>
       <h4><a class= "letrablanca" href="./detail-series.html?id=${seriesData[i].id}">Serie:${seriesData[i].name}</a></h4>
       </article>`
                     console.log(seriesData[i])
@@ -72,30 +68,16 @@ fetch(url)
     //Validar Formularios// 
 let form = document.querySelector('form');
 let inputfield = document.querySelector('.search');
-
+let Message = document.querySelector(".message")
 form.addEventListener('submit', function (evento) {
     evento.preventDefault();
     console.log("no se envio")
 
     if (inputfield.value == "") {
-        confirm("no ha ingresado ningun termino, desea continuar?")
+       Message.innerText("no ha ingresado ningun termino, desea continuar?")
     } else if (inputfield.value.length < 3) {
-        alert("Ingrese al menos 3 terminos")
+        Message.innerText("Ingrese al menos 3 terminos")
     } else {
         this.submit();
-    }
-})
-//Quiero que no aparescan resultados para null// 
-
-form.addEventListener('submit', function (evento) {
-    evento.preventDefault();
-    console.log("No hay resultados")
-
-    if (peliculas.name == null) {
-        alert("No se encuentran resultados para su busqueda, desea continuar?")
-    } else {
-        let Finding = document.querySelector("No-results")
-        Finding.innerText +=
-            `<h2 class="no-results">"No se encuentran resultados para su busqueda"</h2>`
     }
 })
