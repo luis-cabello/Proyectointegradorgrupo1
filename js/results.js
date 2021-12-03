@@ -1,8 +1,8 @@
-//retorna la infomación en cadena de texto (dificil procesar y manipular), almaccena QS de una url
+
 let queryString = location.search;
-//la transformamos en Objeto literal
+
 let queryStringObj = new URLSearchParams(queryString);
-//name del campo input del formulario
+
 let formulario = queryStringObj.get("q");
 
 

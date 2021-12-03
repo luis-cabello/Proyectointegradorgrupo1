@@ -3,48 +3,36 @@
 let favoritos = [];
 let favoritosS = [];
 let favoritosR = [];
-// si fue creada la clave "favoritos" en localStorage
+
 if (localStorage.getItem("favoritos")) {
 
-  // verifica cómo las propiedades llegan como strings
   
-
-  // guarda datos del storage...
-  
-  
-  // y los asigna a la variable "favoritos"
-  // transformados en array
   let recuperoStorage = localStorage.getItem("favoritos")
   
   favoritos = JSON.parse(recuperoStorage)
-  // verifica en consola la transformación a array
+  
   
 console.log(favoritos);
 }
 
 
-// Contenedor de la lista de favoritos
+
 const seccion = document.querySelector(".atributoflex3")
 
 
 
-// si NO hay favs en la lista
-if( favoritos.length == 0   ) {
 
-  // muestra leyenda apropiada en un "article"
-  // y un botón "volver"
-  seccion.innerHTML += `
-  <h2> </h2>
-  <p> </p>`
+if( favoritos == null || favoritos.length == 0   ) {
+
+ 
+  seccion.innerHTML =  `<h2> No hay favoritos en tu lista  </h2>
+    <p>  <a href="index.js"> volver </a> </p>`
     
-} else { // Si SI hay favoritos en el array "favoritos"
-    
-  /*
-  busca cada uno de los gifs y los imprime en pantalla
-  */
+} else {
+  
   for( i = 0; i < favoritos.length; i++ ) {
 
-    buscarYMostrarFavoritos(favoritos[i])
+    buscarYMostrarFavoritos(favoritos[i]) //invoco la funcion antes que sea definida, para que me imprima cada elemento que este dentro de la lista de favoritos(que recorra el)
 
   }
     
@@ -52,8 +40,7 @@ if( favoritos.length == 0   ) {
 
 function buscarYMostrarFavoritos(cadaPelicula) {
 
-  // se guarda endpoint en variable "url"
-  // para que el pedido al servidor quede más claro
+  
   
   let urlP = ("https://api.themoviedb.org/3/movie/" + cadaPelicula + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
   // pedido al servidor
@@ -86,46 +73,33 @@ seccion.innerHTML += `<article>
 }
 
 
-//Local storage series
+
 
 if (localStorage.getItem("favoritosS")) {
 
-    // verifica cómo las propiedades llegan como strings
-    
-  
-    // guarda datos del storage...
-    
-    
-    // y los asigna a la variable "favoritos"
-    // transformados en array
+   
     let recuperoStorageS = localStorage.getItem("favoritosS")
     
     favoritosS = JSON.parse(recuperoStorageS)
-    // verifica en consola la transformación a array
     
   console.log(favoritosS);
   }
   
   
-  // Contenedor de la lista de favoritos
+  
   const seccionS = document.querySelector(".atributoflex3")
   
   
   
-  // si NO hay favs en la lista
-  if( favoritosS.length == 0   ) {
+ 
+  if( favoritosS == null || favoritosS.length == 0  ) {
   
-    // muestra leyenda apropiada en un "article"
-    // y un botón "volver"
+   
     seccionS.innerHTML += `
-    <h2> No hay favoritos en tu lista </h2>
-    <p> <a class="letrablanca" href= "./index.html"> volver <-- </a>  </p>`
+    <h2> </h2>
+    <p> </p>`
       
-  } else { // Si SI hay favoritos en el array "favoritos"
-      
-    /*
-    busca cada uno de los gifs y los imprime en pantalla
-    */
+  } else { 
     for( i = 0; i < favoritosS.length; i++ ) {
   
       buscarYMostrarFavoritosS(favoritosS[i])
@@ -136,10 +110,9 @@ if (localStorage.getItem("favoritosS")) {
   
   function buscarYMostrarFavoritosS(serieId) {
   
-    // se guarda endpoint en variable "url"
-    // para que el pedido al servidor quede más claro
+   
     
-    let urlS= ("https://api.themoviedb.org/3/tv/" + serieId + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+    let urlS = ("https://api.themoviedb.org/3/tv/" + serieId + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
     // pedido al servidor
     fetch(urlS)
       .then( function( respuesta ) {
@@ -196,13 +169,13 @@ const seccionR = document.querySelector(".atributoflex3")
 
 
 // si NO hay favs en la lista
-if( favoritosR.length == 0   ) {
+if(favoritosR == null || favoritosR.length == 0  ) {
 
   // muestra leyenda apropiada en un "article"
   // y un botón "volver"
-  seccionR.innerHTML += `
-  <h2> No hay favoritos en tu lista </h2>
-  <p> <a class="letrablanca" href= "./index.html"> volver <-- </a>  </p>`
+  seccionR.innerHTML = `
+  <h2>  </h2>
+  <p>   </p>`
     
 } else { // Si SI hay favoritos en el array "favoritos"
     
@@ -222,7 +195,7 @@ function buscarYMostrarFavoritosR(recomendadasid) {
   // se guarda endpoint en variable "url"
   // para que el pedido al servidor quede más claro
   
-  let urlR= ("https://api.themoviedb.org/3/movie/" + recomendadasid + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
+  let urlR = ("https://api.themoviedb.org/3/movie/" + recomendadasid + "?api_key=7a176cc95147be6e695be2faf0e8ff9c")
   // pedido al servidor
   fetch(urlR)
     .then( function( respuesta ) {

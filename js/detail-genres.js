@@ -1,12 +1,11 @@
 //Detalles genero Peliculas
-console.log(location.search); //Obtengo la informacion de la Query String, viene en cadena de texto
+console.log(location.search);
 
-let convierto = new URLSearchParams(location.search); //Como viene en cadena de texto, la paso a algo mas manejable, con URL Search Params, a un objeto literal
+let convierto = new URLSearchParams(location.search); 
 
-let idGp = convierto.get("id"); //Permito traer la clave valor del ID, con el metodo GET.
+let idGp = convierto.get("id");
 let tipo = convierto.get("type");
-console.log(tipo);
-console.log(idGp); //Me fijo si salio todo bien en consola, y si los datos me aparecen. 
+
 
 //let url = "";
 

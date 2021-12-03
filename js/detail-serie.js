@@ -55,7 +55,6 @@ if (favoritosS.includes(serieId)) {
 }
 
 
-
 fav.addEventListener("click", function (e) {
     e.preventDefault();
 
@@ -79,9 +78,9 @@ fav.addEventListener("click", function (e) {
 
     }
 
-    let favStorageS = JSON.stringify(favoritosS)
+    let favStorageS = JSON.stringify(favoritosS) //lo pasamos de array a string, porque local storage solo almacena strings
 
-    localStorage.setItem("favoritosS", favStorageS)
+    localStorage.setItem("favoritosS", favStorageS) // subimos el favorito al localstorage. 
 
 });
 
@@ -114,7 +113,7 @@ fav.addEventListener("click", function (e) {
 
 
 
-  //Validar Formularios// 
+   //Validar Formularios// 
 let form = document.querySelector('form');
 let inputfield = document.querySelector('.search');
 let Message = document.querySelector(".message")
@@ -124,9 +123,9 @@ form.addEventListener('submit', function (evento) {
     console.log("no se envio")
 
     if (inputfield.value == "") {
-       Message.innerText = "no ha ingresado ningun termino, desea continuar?";
+       Message.innerText("no ha ingresado ningun termino, desea continuar?")
     } else if (inputfield.value.length < 3) {
-        Message.innerText= "Ingrese al menos 3 terminos";
+        Message.innerText("Ingrese al menos 3 terminos")
     } else {
         this.submit();
     }
